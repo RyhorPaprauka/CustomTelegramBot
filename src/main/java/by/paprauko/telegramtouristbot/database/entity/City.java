@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Builder
 @Entity
 @Table(name = "city", schema = "city_storage")
-public class City {
+public class City implements BaseEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

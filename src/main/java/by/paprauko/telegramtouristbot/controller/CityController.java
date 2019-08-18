@@ -55,7 +55,7 @@ public class CityController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<City> saveCity(@RequestBody City city, @PathVariable Long id) {
+    public ResponseEntity<City> updateCity(@RequestBody City city, @PathVariable Long id) {
         city.setId(id);
         City updatedCity = cityService.updateCity(city);
 

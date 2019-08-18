@@ -17,7 +17,7 @@ public class UniqueCityNameValidator implements ConstraintValidator<UniqueCityNa
     }
 
     public boolean isValid(String name, ConstraintValidatorContext context) {
-        return name != null && !cityRepository.findByName(name.toLowerCase()).isPresent();
+        return name != null && !cityRepository.findByNameIgnoreCase(name).isPresent();
     }
 
 }

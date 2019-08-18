@@ -27,7 +27,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             String textMessage = message.getText();
             Long chatId = message.getChatId();
 
-            String answer = cityService.getCityByName(textMessage.toLowerCase())
+            String answer = cityService.getCityByName(textMessage)
                     .map(City::getInformation)
                     .orElse("There is no information about " + textMessage);
 
